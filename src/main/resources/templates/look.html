@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>显示编辑器内容</title>
+</head>
+<body>
+<span id="demo" hidden th:text="${#request.getAttribute('content')}"></span>
+
+<div id="look" ></div>
+<script type="text/javascript">
+        var Text = document.getElementById('demo').innerText;
+        document.getElementById('look').innerHTML = Text;
+
+</script>
+</body>
+</html>
